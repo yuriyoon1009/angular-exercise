@@ -53,6 +53,7 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 - [Angular Offical Docs](https://angular.io/docs)
 - [RxJS API Docs](http://reactivex.io/rxjs/)
+- [TodoMVC](http://todomvc.com/)
 
 
 Angular 공식 문서에 `Tutorial`과 `Fundamentals`을 읽는 것을 추천드립니다.
