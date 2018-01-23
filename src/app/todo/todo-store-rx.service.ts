@@ -18,28 +18,4 @@ export class TodoStoreRxService {
     get todos(): Observable<Todo[]> {
         return this._todos.asObservable();
     }
-
-    registerReadTodosSource(source: Observable<any>) {
-    }
-
-    registerAddTodoSource(source: Observable<string>) {
-    }
-
-    registerToggleTodoSource(source: Observable<Todo>) {
-    }
-
-    registerRemoveTodoSource(source: Observable<Todo>) {
-    }
-
-    destroy() {
-    }
-
-    pullTodos() {
-        const source = Observable.create((observer) => {
-            observer.next();
-            observer.complete();
-        });
-
-        this.registerReadTodosSource(source);
-    }
 }
