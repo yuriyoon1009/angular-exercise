@@ -4,24 +4,24 @@ import { StorageService } from '../core/storage.service';
 
 
 // Get todos from storage by item name.
+// 로컬에서 돌리기
 const STORAGE_ITEM_NAME = 'ANGULAR_EXERCISE_TODO_STORAGE';
-
 
 @Injectable()
 export class TodoStoreService {
     private _todos: Todo[] = [];
 
-    constructor(private storageService: StorageService) {
-    }
+    constructor(private storageService: StorageService) { }
 
-    get todos(): Todo[] {
-    }
+    // this.storageService.remove();
+    // get todos(): Todo[] {
+    // }
 
-    get remainTodos(): Todo[] {
-    }
+    // get remainTodos(): Todo[] {
+    // }
 
-    get completedTodos(): Todo[] {
-    }
+    // get completedTodos(): Todo[] {
+    // }
 
     getAllTodosFromStorage() {
     }
