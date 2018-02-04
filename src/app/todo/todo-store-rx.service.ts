@@ -26,40 +26,40 @@ export class TodoStoreRxService {
 
     getList(): AngularFireList<Todo[]> {
       this.todos = this.db.list('/todo');
-      return this.todos
+      return this.todos;
     }
 
     get(id: string): AngularFireObject<Todo> {
       const todoPath =  `${this.basePath}/${id}`;
       this.todo = this.db.object(todoPath);
-      return this.todo
+      return this.todo;
     }
 
     create(todo: Todo): void  {
        this.db.database.ref('/todo').push({
-         title:todo.title,
-         id:todo.id
+         title: todo.title,
+         id: todo.id
        });
 
      }
 
      update(id: string, value: any): void {
        this.todos.update(id, value)
-         .catch(error => this.handleError(error))
+         .catch(error => this.handleError(error));
      }
 
      delete(id: string): void {
          this.todos.remove(id)
-           .catch(error => this.handleError(error))
+           .catch(error => this.handleError(error));
      }
 
      deleteAll(): void {
          this.todos.remove()
-           .catch(error => this.handleError(error))
+           .catch(error => this.handleError(error));
      }
 
      private handleError(error) {
-       console.log(error)
+       console.log(error);
      }
 
 
