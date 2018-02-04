@@ -7,9 +7,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { TodoModule } from './todo/todo.module';
 import { CoreModule } from './core/core.module';
 
-import { AngularFireModule } from 'angularFire2';
-import { environment } from '../environments/environment';
+import {AngularFireModule} from 'angularfire2'
+import {environment} from '../environments/environment'
 import { AngularFireDatabase } from 'angularfire2/database';
+
 @NgModule({
     declarations: [
         AppComponent

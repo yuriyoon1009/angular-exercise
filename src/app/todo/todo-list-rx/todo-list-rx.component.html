@@ -1,9 +1,17 @@
 <section class="TodoListRx">
     <div class="TodoListRx__creation">
-        <input id="addTodo" type="text" />
-        <button class="TodoListRx__createNewTodoButton">만들기</button>
+        <input id="addTodo" type="text" [(ngModel)]="newTodoTitle"/>
+        <button class="TodoListRx__createNewTodoButton"
+        (click)="addTodo(newTodoTitle)">만들기</button>
     </div>
 
-    <ul class="TodoListRx__list">
+
+    <ul class="TodoList__list">
+      <div class="TodoItem" *ngFor="let todo of todos">
+          <label class="TodoItem__title">{{todo.title}}</label>
+          <button (click)="remove(todo.$key)" class="TodoItem__removeButton">삭제</button>
+      </div>
     </ul>
+
+    <button (click)='removeAll()'>모두삭제</button>
 </section>

@@ -43,6 +43,7 @@
 
 /** Evergreen browsers require these. **/
 // Used for reflect-metadata in JIT. If you use AOT (and only Angular decorators), you can remove.
+import 'core-js/es6/reflect';
 import 'core-js/es7/reflect';
 
 
@@ -73,5 +74,13 @@ import 'zone.js/dist/zone';  // Included with Angular CLI.
  */
 // import 'intl/locale-data/jsonp/en';
 
-import 'rxjs/add/operator/switchMap';
 import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/take';
+import 'rxjs/add/operator/switchMap';
+import 'rxjs/add/operator/do';
+import 'rxjs/add/operator/filter';
+import 'rxjs/add/observable/zip';
+import 'rxjs/add/observable/range';
+import 'rxjs/add/observable/from';
+import 'rxjs/add/operator/mergeMap';
+import 'rxjs/add/operator/reduce';

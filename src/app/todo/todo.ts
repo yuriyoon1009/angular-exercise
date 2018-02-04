@@ -1,7 +1,7 @@
 export class Todo {
-    readonly id: string;
-    private _completed = false;
-    private _title: string;
+    id: string;
+    _completed = false;
+    _title: string;
 
     constructor(title: string, completed = false) {
         this.title = title;
