@@ -9,6 +9,7 @@ import { Todo } from '../todo';
 })
 export class TodoItemComponent implements OnInit {
     @Input() todos: Todo;
+    @Input() rx: string;
     @Output() toggle = new EventEmitter<Todo>();
     @Output() remove = new EventEmitter<Todo>();
 

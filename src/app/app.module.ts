@@ -7,7 +7,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { TodoModule } from './todo/todo.module';
 import { CoreModule } from './core/core.module';
 
-
+import { AngularFireModule } from 'angularFire2';
+import { environment } from '../environments/environment';
+import { AngularFireDatabase } from 'angularfire2/database';
 @NgModule({
     declarations: [
         AppComponent
@@ -17,9 +19,10 @@ import { CoreModule } from './core/core.module';
         CommonModule,
         CoreModule,
         AppRoutingModule,
-        TodoModule
+        TodoModule,
+        AngularFireModule.initializeApp(environment.firebase)
     ],
-    providers: [],
+    providers: [AngularFireDatabase],
     bootstrap: [AppComponent]
 })
 export class AppModule {
