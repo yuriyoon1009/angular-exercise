@@ -18,10 +18,10 @@ export class TodoListRxComponent implements OnInit {
     }
 
     ngOnInit() {
-      var x = this.db.getList().snapshotChanges().subscribe(data => {
+      const x = this.db.getList().snapshotChanges().subscribe(data => {
         this.todos = [];
         data.forEach(element => {
-          var y = element.payload.toJSON();
+          const y = element.payload.toJSON();
           y["$key"] = element.key;
           this.todos.push(y as Todo);
         });
